@@ -36,7 +36,7 @@ app.use("/api/v1/category", categoryRoutes);
 app.use("/api/v1/product", productRoutes);
 
 //Rest Api
-app.use("*", function (req, res) {
+app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"))
 });
 
