@@ -43,7 +43,7 @@ app.use("*", function (req, res) {
 //Port
 const PORT = process.env.PORT;
 
-connectDatabase(()=>{
+connectDatabase().then(()=>{
 app.listen(PORT, () => {
   console.log("Server Running on 8080");
 })
